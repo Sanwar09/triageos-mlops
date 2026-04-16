@@ -1,0 +1,501 @@
+text,severity
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. sprained ankle. Fully conscious. ETA 25 mins.,LOW
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with severe head trauma. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with severe head trauma. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. mild headache. Fully conscious. ETA 25 mins.,LOW
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. nausea. Fully conscious. ETA 25 mins.,LOW
+Routine transport. dehydration. Fully conscious. ETA 25 mins.,LOW
+Patient presents with severe chest pain. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with severe chest pain. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of deep laceration. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. nausea. Fully conscious. ETA 25 mins.,LOW
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of fractured arm. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient complains of fractured arm. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. mild headache. Fully conscious. ETA 25 mins.,LOW
+Patient complains of deep laceration. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. dehydration. Fully conscious. ETA 25 mins.,LOW
+Patient presents with severe head trauma. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. sprained ankle. Fully conscious. ETA 25 mins.,LOW
+Patient complains of fractured arm. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. dehydration. Fully conscious. ETA 25 mins.,LOW
+Routine transport. nausea. Fully conscious. ETA 25 mins.,LOW
+Patient complains of high fever. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of fractured arm. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient complains of fractured arm. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. sprained ankle. Fully conscious. ETA 25 mins.,LOW
+Patient presents with severe head trauma. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. dehydration. Fully conscious. ETA 25 mins.,LOW
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient complains of fractured arm. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with severe chest pain. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. mild headache. Fully conscious. ETA 25 mins.,LOW
+Patient presents with severe head trauma. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with severe head trauma. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with severe chest pain. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. nausea. Fully conscious. ETA 25 mins.,LOW
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. dehydration. Fully conscious. ETA 25 mins.,LOW
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Patient presents with severe chest pain. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with severe head trauma. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Routine transport. mild headache. Fully conscious. ETA 25 mins.,LOW
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. mild headache. Fully conscious. ETA 25 mins.,LOW
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with severe chest pain. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. nausea. Fully conscious. ETA 25 mins.,LOW
+Patient complains of fractured arm. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. mild headache. Fully conscious. ETA 25 mins.,LOW
+Patient complains of deep laceration. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of fractured arm. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. sprained ankle. Fully conscious. ETA 25 mins.,LOW
+Patient presents with severe head trauma. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Routine transport. nausea. Fully conscious. ETA 25 mins.,LOW
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. nausea. Fully conscious. ETA 25 mins.,LOW
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. sprained ankle. Fully conscious. ETA 25 mins.,LOW
+Routine transport. sprained ankle. Fully conscious. ETA 25 mins.,LOW
+Patient complains of deep laceration. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of high fever. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. sprained ankle. Fully conscious. ETA 25 mins.,LOW
+Patient presents with severe chest pain. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of deep laceration. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. dehydration. Fully conscious. ETA 25 mins.,LOW
+Routine transport. sprained ankle. Fully conscious. ETA 25 mins.,LOW
+Routine transport. sprained ankle. Fully conscious. ETA 25 mins.,LOW
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with severe chest pain. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Routine transport. nausea. Fully conscious. ETA 25 mins.,LOW
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Patient complains of deep laceration. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Patient presents with severe chest pain. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Routine transport. dehydration. Fully conscious. ETA 25 mins.,LOW
+Patient complains of breathing difficulty. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with severe head trauma. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of breathing difficulty. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with severe head trauma. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Patient complains of high fever. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. nausea. Fully conscious. ETA 25 mins.,LOW
+Routine transport. nausea. Fully conscious. ETA 25 mins.,LOW
+Patient complains of deep laceration. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. sprained ankle. Fully conscious. ETA 25 mins.,LOW
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. nausea. Fully conscious. ETA 25 mins.,LOW
+Routine transport. mild headache. Fully conscious. ETA 25 mins.,LOW
+Routine transport. dehydration. Fully conscious. ETA 25 mins.,LOW
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Routine transport. mild headache. Fully conscious. ETA 25 mins.,LOW
+Routine transport. mild headache. Fully conscious. ETA 25 mins.,LOW
+Patient complains of fractured arm. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of deep laceration. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. nausea. Fully conscious. ETA 25 mins.,LOW
+Patient presents with severe chest pain. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Patient complains of deep laceration. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. sprained ankle. Fully conscious. ETA 25 mins.,LOW
+Routine transport. dehydration. Fully conscious. ETA 25 mins.,LOW
+Routine transport. mild headache. Fully conscious. ETA 25 mins.,LOW
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. nausea. Fully conscious. ETA 25 mins.,LOW
+Routine transport. mild headache. Fully conscious. ETA 25 mins.,LOW
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. nausea. Fully conscious. ETA 25 mins.,LOW
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. dehydration. Fully conscious. ETA 25 mins.,LOW
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with severe head trauma. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. nausea. Fully conscious. ETA 25 mins.,LOW
+Patient complains of high fever. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of fractured arm. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Patient presents with severe chest pain. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Routine transport. mild headache. Fully conscious. ETA 25 mins.,LOW
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient complains of deep laceration. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient complains of high fever. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with severe chest pain. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of breathing difficulty. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient complains of deep laceration. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. dehydration. Fully conscious. ETA 25 mins.,LOW
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Routine transport. dehydration. Fully conscious. ETA 25 mins.,LOW
+Routine transport. sprained ankle. Fully conscious. ETA 25 mins.,LOW
+Routine transport. nausea. Fully conscious. ETA 25 mins.,LOW
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. mild headache. Fully conscious. ETA 25 mins.,LOW
+Routine transport. sprained ankle. Fully conscious. ETA 25 mins.,LOW
+Patient complains of fractured arm. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient complains of high fever. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. sprained ankle. Fully conscious. ETA 25 mins.,LOW
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. mild headache. Fully conscious. ETA 25 mins.,LOW
+Patient complains of deep laceration. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Patient complains of breathing difficulty. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with severe head trauma. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. mild headache. Fully conscious. ETA 25 mins.,LOW
+Patient complains of fractured arm. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. nausea. Fully conscious. ETA 25 mins.,LOW
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with severe head trauma. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. mild headache. Fully conscious. ETA 25 mins.,LOW
+Routine transport. nausea. Fully conscious. ETA 25 mins.,LOW
+Routine transport. dehydration. Fully conscious. ETA 25 mins.,LOW
+Routine transport. mild headache. Fully conscious. ETA 25 mins.,LOW
+Patient presents with severe head trauma. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. nausea. Fully conscious. ETA 25 mins.,LOW
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. dehydration. Fully conscious. ETA 25 mins.,LOW
+Patient complains of high fever. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with severe head trauma. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of fractured arm. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. dehydration. Fully conscious. ETA 25 mins.,LOW
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. nausea. Fully conscious. ETA 25 mins.,LOW
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. mild headache. Fully conscious. ETA 25 mins.,LOW
+Patient presents with severe head trauma. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of breathing difficulty. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Patient complains of deep laceration. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. sprained ankle. Fully conscious. ETA 25 mins.,LOW
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of fractured arm. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient complains of high fever. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with severe chest pain. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with severe head trauma. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of breathing difficulty. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Routine transport. sprained ankle. Fully conscious. ETA 25 mins.,LOW
+Routine transport. dehydration. Fully conscious. ETA 25 mins.,LOW
+Routine transport. dehydration. Fully conscious. ETA 25 mins.,LOW
+Patient presents with severe chest pain. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Patient presents with severe chest pain. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of breathing difficulty. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of breathing difficulty. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of fractured arm. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of fractured arm. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. dehydration. Fully conscious. ETA 25 mins.,LOW
+Routine transport. dehydration. Fully conscious. ETA 25 mins.,LOW
+Routine transport. dehydration. Fully conscious. ETA 25 mins.,LOW
+Patient complains of fractured arm. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient complains of high fever. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with severe head trauma. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. sprained ankle. Fully conscious. ETA 25 mins.,LOW
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with severe chest pain. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with severe head trauma. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of deep laceration. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with severe chest pain. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with severe chest pain. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with severe chest pain. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient complains of breathing difficulty. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient complains of high fever. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient complains of breathing difficulty. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of fractured arm. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Patient presents with severe head trauma. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with severe head trauma. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. sprained ankle. Fully conscious. ETA 25 mins.,LOW
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of fractured arm. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient complains of fractured arm. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. sprained ankle. Fully conscious. ETA 25 mins.,LOW
+Patient presents with severe chest pain. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with severe head trauma. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of high fever. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. mild headache. Fully conscious. ETA 25 mins.,LOW
+Routine transport. dehydration. Fully conscious. ETA 25 mins.,LOW
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. mild headache. Fully conscious. ETA 25 mins.,LOW
+Patient complains of breathing difficulty. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. nausea. Fully conscious. ETA 25 mins.,LOW
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of breathing difficulty. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Routine transport. nausea. Fully conscious. ETA 25 mins.,LOW
+Patient complains of fractured arm. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. mild headache. Fully conscious. ETA 25 mins.,LOW
+Routine transport. dehydration. Fully conscious. ETA 25 mins.,LOW
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of breathing difficulty. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of high fever. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient complains of deep laceration. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. dehydration. Fully conscious. ETA 25 mins.,LOW
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with severe chest pain. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. mild headache. Fully conscious. ETA 25 mins.,LOW
+Patient complains of breathing difficulty. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. mild headache. Fully conscious. ETA 25 mins.,LOW
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of deep laceration. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with severe chest pain. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with severe head trauma. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient complains of deep laceration. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. mild headache. Fully conscious. ETA 25 mins.,LOW
+Patient presents with severe chest pain. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with severe head trauma. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with severe chest pain. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with severe head trauma. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of breathing difficulty. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. mild headache. Fully conscious. ETA 25 mins.,LOW
+Routine transport. sprained ankle. Fully conscious. ETA 25 mins.,LOW
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Routine transport. sprained ankle. Fully conscious. ETA 25 mins.,LOW
+Routine transport. mild headache. Fully conscious. ETA 25 mins.,LOW
+Routine transport. dehydration. Fully conscious. ETA 25 mins.,LOW
+Patient complains of fractured arm. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. dehydration. Fully conscious. ETA 25 mins.,LOW
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with severe head trauma. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. mild headache. Fully conscious. ETA 25 mins.,LOW
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of deep laceration. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient complains of breathing difficulty. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with severe chest pain. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with severe head trauma. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of fractured arm. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Routine transport. nausea. Fully conscious. ETA 25 mins.,LOW
+Patient complains of deep laceration. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient complains of fractured arm. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. sprained ankle. Fully conscious. ETA 25 mins.,LOW
+Routine transport. sprained ankle. Fully conscious. ETA 25 mins.,LOW
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of high fever. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of fractured arm. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient complains of deep laceration. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. nausea. Fully conscious. ETA 25 mins.,LOW
+Patient complains of breathing difficulty. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. nausea. Fully conscious. ETA 25 mins.,LOW
+Routine transport. nausea. Fully conscious. ETA 25 mins.,LOW
+Patient complains of high fever. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. sprained ankle. Fully conscious. ETA 25 mins.,LOW
+Routine transport. nausea. Fully conscious. ETA 25 mins.,LOW
+Patient complains of breathing difficulty. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of fractured arm. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. dehydration. Fully conscious. ETA 25 mins.,LOW
+Patient presents with severe chest pain. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. sprained ankle. Fully conscious. ETA 25 mins.,LOW
+Patient complains of fractured arm. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. sprained ankle. Fully conscious. ETA 25 mins.,LOW
+Routine transport. mild headache. Fully conscious. ETA 25 mins.,LOW
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. mild headache. Fully conscious. ETA 25 mins.,LOW
+Patient presents with severe chest pain. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of breathing difficulty. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of high fever. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient complains of breathing difficulty. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. nausea. Fully conscious. ETA 25 mins.,LOW
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of breathing difficulty. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient complains of fractured arm. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. nausea. Fully conscious. ETA 25 mins.,LOW
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. nausea. Fully conscious. ETA 25 mins.,LOW
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. sprained ankle. Fully conscious. ETA 25 mins.,LOW
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Patient presents with severe chest pain. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with severe head trauma. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of high fever. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. sprained ankle. Fully conscious. ETA 25 mins.,LOW
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient complains of breathing difficulty. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient complains of fractured arm. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient complains of breathing difficulty. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient complains of fractured arm. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Routine transport. nausea. Fully conscious. ETA 25 mins.,LOW
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Routine transport. dehydration. Fully conscious. ETA 25 mins.,LOW
+Routine transport. sprained ankle. Fully conscious. ETA 25 mins.,LOW
+Patient presents with severe chest pain. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. nausea. Fully conscious. ETA 25 mins.,LOW
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Patient complains of breathing difficulty. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with severe head trauma. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. dehydration. Fully conscious. ETA 25 mins.,LOW
+Patient complains of deep laceration. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of fractured arm. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient complains of breathing difficulty. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with severe head trauma. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of breathing difficulty. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with severe head trauma. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. sprained ankle. Fully conscious. ETA 25 mins.,LOW
+Patient complains of deep laceration. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient complains of high fever. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. mild headache. Fully conscious. ETA 25 mins.,LOW
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with severe chest pain. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with severe chest pain. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient complains of fractured arm. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. nausea. Fully conscious. ETA 25 mins.,LOW
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of high fever. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Routine transport. mild headache. Fully conscious. ETA 25 mins.,LOW
+Patient presents with severe chest pain. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. nausea. Fully conscious. ETA 25 mins.,LOW
+Routine transport. dehydration. Fully conscious. ETA 25 mins.,LOW
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Patient presents with gunshot wound. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with severe chest pain. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of deep laceration. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Routine transport. minor scrape. Fully conscious. ETA 25 mins.,LOW
+Patient complains of severe abdominal pain. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. dehydration. Fully conscious. ETA 25 mins.,LOW
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with severe head trauma. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of fractured arm. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. nausea. Fully conscious. ETA 25 mins.,LOW
+Routine transport. mild headache. Fully conscious. ETA 25 mins.,LOW
+Routine transport. sprained ankle. Fully conscious. ETA 25 mins.,LOW
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of high fever. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with cardiac arrest. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. mild headache. Fully conscious. ETA 25 mins.,LOW
+Patient presents with severe chest pain. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of breathing difficulty. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with unresponsive. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient complains of high fever. Vitals stable but needs urgent care. ETA 15 mins.,MODERATE
+Patient presents with severe head trauma. Vitals unstable. ETA 5 mins.,CRITICAL
+Routine transport. sprained ankle. Fully conscious. ETA 25 mins.,LOW
+Patient presents with severe chest pain. Vitals unstable. ETA 5 mins.,CRITICAL
+Patient presents with severe head trauma. Vitals unstable. ETA 5 mins.,CRITICAL
