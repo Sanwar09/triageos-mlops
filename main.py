@@ -1,17 +1,25 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 import mlflow.sklearn
-import pandas as pd
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="TriageOS MLOps Production API")
+
+# --- MLOPS TRICK 1: CORS Middleware (Allows your index.html to talk to the API) ---
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"], 
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 class PatientReport(BaseModel):
     text: str
 
-# 1. Initialize model as None to prevent crashes
+# --- MLOPS TRICK 2: Initialize model as None (Graceful Degradation Failsafe) ---
 model = None
 
-# --- MLOPS TRICK: Automatically fetch the best model from MLflow ---
 print("Fetching the best model from MLflow Registry...")
 try:
     # Find our experiment
@@ -32,21 +40,19 @@ try:
             model = mlflow.sklearn.load_model(model_uri)
             print(f"✅ Production Model Loaded Successfully! (Run ID: {best_run_id})")
 except Exception as e:
-    print(f"⚠️ Warning: Cloud MLflow disconnected. Using safety fallback. Error: {e}")
+    print(f"⚠️ Warning: MLflow disconnected. Using safety fallback. Error: {e}")
 
 # --- API ROUTE ---
 @app.post("/api/dispatch")
 async def process_dispatch(report: PatientReport):
     
-    # MLOPS BEST PRACTICE: Graceful Degradation (Failsafe)
+    # Graceful Degradation: If AI is online, use it. If offline, default to CRITICAL.
     if model is not None:
-        # If AI is online, use it
         prediction = model.predict([report.text])[0]
     else:
-        # If AI is offline, default to CRITICAL to protect the patient
         prediction = "CRITICAL"
     
-    # Simulate the multi-agent routing logic
+    # Hospital routing logic
     bed_assignment = "TRAUMA-BAY" if prediction == "CRITICAL" else "STANDARD-ER"
     
     return {

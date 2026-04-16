@@ -28,7 +28,7 @@ jobs:
     - name: Run Automated API & Model Tests
       run: |
         python train.py
-        pytest test_api.py
+        pytest -s test_api.py
 
     - name: Build Docker Container (Dry Run)
       run: |

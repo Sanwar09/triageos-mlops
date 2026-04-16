@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TriageOS | Dual-Portal Command</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        .fade-in { animation: fadeIn 0.4s ease-out forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        .agent-card-hidden { opacity: 0; transform: translateY(20px); transition: all 0.5s ease-out; }
+        .agent-card-visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="text-slate-800 h-screen overflow-hidden flex flex-col">
+
+    <div id="auth-view" class="flex-1 flex items-center justify-center bg-slate-900 absolute inset-0 z-50">
+        <div class="bg-slate-800 p-10 rounded-2xl shadow-2xl w-full max-w-md border border-slate-700">
+            <div class="text-center mb-6">
+                <i class="fa-solid fa-truck-medical text-sky-400 text-5xl mb-4"></i>
+                <h1 class="text-3xl font-bold text-white tracking-wide">TriageOS</h1>
+                <p class="text-slate-400 text-sm mt-2 font-mono uppercase tracking-widest">System Authentication</p>
+            </div>
+            
+            <label class="block text-slate-400 text-[10px] font-bold mb-2 uppercase tracking-widest text-center">Select Your Portal</label>
+            <div class="flex mb-6 bg-slate-900 p-1 rounded-xl border border-slate-700">
+                <button type="button" onclick="setRole('ambulance')" id="role-amb" class="flex-1 py-3 text-xs font-bold rounded-lg transition bg-sky-600 text-white shadow-md">AMBULANCE</button>
+                <button type="button" onclick="setRole('hospital')" id="role-hosp" class="flex-1 py-3 text-xs font-bold rounded-lg transition text-slate-400 hover:text-slate-200">HOSPITAL STAFF</button>
+            </div>
+
+            <div id="auth-error" class="hidden bg-red-500/10 border border-red-500/50 text-red-400 text-sm p-3 rounded-lg mb-4 text-center fade-in"></div>
+
+            <div class="flex mb-6 border-b border-slate-600">
+                <button type="button" onclick="toggleAuth('login')" id="tab-login" class="flex-1 pb-2 font-bold text-sky-400 border-b-2 border-sky-400 transition">Login</button>
+                <button type="button" onclick="toggleAuth('register')" id="tab-register" class="flex-1 pb-2 font-bold text-slate-400 border-b-2 border-transparent hover:text-slate-300 transition">Register</button>
+            </div>
+
+            <div id="form-login" class="space-y-4 fade-in">
+                <div>
+                    <label class="block text-slate-400 text-[10px] font-bold mb-1 uppercase tracking-widest">Portal Access ID (Email)</label>
+                    <input type="email" id="login-email" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-sky-400 font-mono text-sm" placeholder="user@triageos.com">
+                </div>
+                <div>
+                    <label class="block text-slate-400 text-[10px] font-bold mb-1 uppercase tracking-widest">Security Key</label>
+                    <input type="password" id="login-pass" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-sky-400 font-mono text-sm" placeholder="********">
+                </div>
+                <button type="button" onclick="handleLogin()" class="w-full bg-sky-600 hover:bg-sky-500 text-white font-bold py-4 rounded-lg transition mt-4 text-xs uppercase tracking-widest shadow-lg">
+                    Initialize Portal
+                </button>
+                
+                <div class="text-[10px] text-slate-500 text-center mt-4 space-y-1">
+                    <p>Demo Ambulance: <b>unit1@ems.com</b> / unit123</p>
+                    <p>Demo Hospital: <b>admin@hospital.com</b> / admin123</p>
+                </div>
+            </div>
+
+            <div id="form-register" class="space-y-4 hidden fade-in">
+                <div>
+                    <label class="block text-slate-400 text-[10px] font-bold mb-1 uppercase tracking-widest">Name / Unit Designation</label>
+                    <input type="text" id="reg-name" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-sky-400 font-mono text-sm" placeholder="e.g. Unit 42 or Dr. Smith">
+                </div>
+                <div>
+                    <label class="block text-slate-400 text-[10px] font-bold mb-1 uppercase tracking-widest">Email</label>
+                    <input type="email" id="reg-email" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-sky-400 font-mono text-sm" placeholder="email@domain.com">
+                </div>
+                <div>
+                    <label class="block text-slate-400 text-[10px] font-bold mb-1 uppercase tracking-widest">Secure Password</label>
+                    <input type="password" id="reg-pass" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-sky-400 font-mono text-sm" placeholder="Create a password">
+                </div>
+                <button type="button" onclick="handleRegister()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-4 rounded-lg transition mt-4 text-xs uppercase tracking-widest shadow-lg">
+                    Create Account
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="app-view" class="hidden flex-1 flex h-screen">
+        
+        <aside class="w-64 bg-slate-900 text-white flex flex-col shadow-2xl z-20">
+            <div class="p-6 flex items-center space-x-3 border-b border-slate-800">
+                <i class="fa-solid fa-truck-medical text-sky-400 text-2xl"></i>
+                <span class="text-xl font-bold tracking-wider">TriageOS</span>
+            </div>
+            
+            <nav class="flex-1 px-4 py-6 space-y-2">
+                <button type="button" onclick="switchTab('view-overview')" id="nav-view-overview" class="hidden w-full flex items-center space-x-3 px-4 py-3 bg-sky-600 text-white rounded-lg transition shadow-md">
+                    <i class="fa-solid fa-satellite-dish w-5 text-center"></i> <span>Live Dispatch</span>
+                </button>
+                
+                <button type="button" onclick="switchTab('view-ward')" id="nav-view-ward" class="hidden w-full flex items-center space-x-3 px-4 py-3 text-slate-400 hover:bg-slate-800 hover:text-white rounded-lg transition">
+                    <i class="fa-solid fa-bed-pulse w-5 text-center"></i> <span>Ward Status</span>
+                </button>
+                <button type="button" onclick="switchTab('view-staff')" id="nav-view-staff" class="hidden w-full flex items-center space-x-3 px-4 py-3 text-slate-400 hover:bg-slate-800 hover:text-white rounded-lg transition">
+                    <i class="fa-solid fa-user-doctor w-5 text-center"></i> <span>Staff Schedules</span>
+                </button>
+                
+                <div class="pt-4 mt-4 border-t border-slate-800" id="nav-judge-container">
+                    <button type="button" onclick="switchTab('view-judge')" id="nav-view-judge" class="w-full flex items-center space-x-3 px-4 py-3 text-emerald-400 hover:bg-slate-800 rounded-lg transition font-mono text-sm">
+                        <i class="fa-solid fa-terminal w-5 text-center"></i> <span>System Audit</span>
+                    </button>
+                </div>
+            </nav>
+
+            <div class="p-4 border-t border-slate-800">
+                <div id="role-badge" class="bg-slate-800 text-[10px] font-bold text-sky-400 px-3 py-2 rounded-lg text-center uppercase tracking-widest border border-sky-400/20">
+                    Role: Unknown
+                </div>
+            </div>
+        </aside>
+
+        <main class="flex-1 flex flex-col relative overflow-hidden">
+            
+            <header class="bg-white h-16 shadow-sm flex items-center justify-between px-8 z-10">
+                <h2 id="header-title" class="text-lg font-bold text-slate-700 uppercase tracking-tight">Portal Console</h2>
+                
+                <div class="flex items-center space-x-6">
+                    <div class="text-right hidden md:block">
+                        <p class="text-sm font-bold text-slate-700" id="profile-name">User Name</p>
+                        <p class="text-[10px] font-bold text-emerald-500 uppercase tracking-widest" id="profile-role-display">System Authenticated</p>
+                    </div>
+                    <button type="button" onclick="logout()" class="h-10 w-10 bg-slate-100 text-slate-400 hover:text-red-500 hover:bg-red-50 rounded-full transition flex items-center justify-center border border-slate-200 shadow-sm" title="Secure Logout">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                    </button>
+                </div>
+            </header>
+
+            <div class="flex-1 overflow-y-auto p-8 bg-slate-50 relative">
+
+                <div id="view-overview" class="view-section hidden max-w-4xl mx-auto">
+                    <div id="input-container" class="bg-white rounded-2xl shadow-xl border border-slate-200 p-8 mb-8 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 bg-sky-600 text-white text-[10px] font-bold px-4 py-1.5 rounded-bl-xl tracking-widest">EMS UPLINK</div>
+                        <h3 class="text-xl font-bold mb-2 flex items-center font-sans text-slate-800">Emergency Field Report</h3>
+                        <p class="text-slate-400 text-sm mb-6 font-sans">Submit your unit ID and patient diagnostics to automatically prep the receiving hospital.</p>
+                        
+                        <div class="mb-6 bg-slate-50 p-6 border border-slate-200 rounded-2xl">
+                            <div class="flex flex-col md:flex-row gap-6">
+                                <div class="w-full md:w-1/3">
+                                    <label class="block text-[10px] font-bold text-slate-400 mb-2 uppercase tracking-widest">Vehicle Unit Number</label>
+                                    <input type="text" id="ambulanceId" class="w-full px-4 py-3 border border-slate-300 rounded-xl text-slate-700 focus:outline-none focus:ring-2 focus:ring-sky-500 font-mono text-sm uppercase" placeholder="AMB-101">
+                                </div>
+                                <div class="w-full md:w-2/3">
+                                    <label class="block text-[10px] font-bold text-slate-400 mb-2 uppercase tracking-widest">Patient Condition Details (Raw Data)</label>
+                                    <textarea id="dispatchInput" class="w-full border border-slate-300 rounded-xl p-3 text-slate-700 focus:outline-none focus:ring-2 focus:ring-sky-500 resize-none h-24 text-sm" placeholder="E.g. Code STEMI inbound. 60yo Female, cardiac arrest en route..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button type="button" onclick="runDispatch()" class="w-full bg-sky-600 hover:bg-sky-700 text-white font-bold py-5 rounded-2xl shadow-lg transition flex items-center justify-center text-sm uppercase tracking-[0.2em]">
+                            <i class="fa-solid fa-satellite-dish mr-3 animate-pulse"></i> Transmit to TriageOS AI
+                        </button>
+                    </div>
+
+                    <div id="processing-state" class="hidden text-center py-20 fade-in">
+                        <div class="inline-block relative w-16 h-16 mb-4">
+                            <div class="absolute inset-0 border-4 border-sky-100 rounded-full"></div>
+                            <div class="absolute inset-0 border-4 border-sky-600 rounded-full border-t-transparent animate-spin"></div>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800">Orchestrating Hospital Response...</h3>
+                    </div>
+
+                    <div id="resolution-dashboard" class="hidden space-y-6">
+                        <div class="flex items-center justify-between bg-emerald-50 border border-emerald-200 p-4 rounded-xl">
+                             <h3 class="text-emerald-800 font-bold text-sm uppercase tracking-widest"><i class="fa-solid fa-check-circle mr-2"></i> Transmission Successful</h3>
+                             <p class="text-[11px] font-mono text-emerald-600" id="res-patient-id"></p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div id="card-db" class="bg-white rounded-xl shadow-sm border-t-4 border-emerald-500 p-5 agent-card-hidden">
+                                <h4 class="font-bold text-slate-700 mb-1 text-[10px] uppercase tracking-widest text-emerald-600">Database</h4>
+                                <p id="res-db" class="text-xs text-slate-500"></p>
+                            </div>
+                            <div id="card-task" class="bg-white rounded-xl shadow-sm border-t-4 border-amber-500 p-5 agent-card-hidden">
+                                <h4 class="font-bold text-slate-700 mb-1 text-[10px] uppercase tracking-widest text-amber-600">Nursing Tasks</h4>
+                                <p id="res-task" class="text-xs text-slate-500"></p>
+                            </div>
+                            <div id="card-cal" class="bg-white rounded-xl shadow-sm border-t-4 border-purple-500 p-5 agent-card-hidden">
+                                <h4 class="font-bold text-slate-700 mb-1 text-[10px] uppercase tracking-widest text-purple-600">Doctor Schedule</h4>
+                                <p id="res-cal" class="text-xs text-slate-500"></p>
+                            </div>
+                        </div>
+                        <button type="button" onclick="resetDispatch()" id="resetBtn" class="hidden w-full text-center text-slate-400 text-[10px] font-bold py-4 hover:text-slate-800 transition">TRANSMIT NEW INCIDENT</button>
+                    </div>
+                </div>
+
+                <div id="view-ward" class="hidden view-section max-w-6xl mx-auto fade-in">
+                    <div class="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
+                        <div class="p-6 border-b border-slate-200 bg-slate-900 text-white flex justify-between items-center">
+                            <div>
+                                <h3 class="text-lg font-bold">Active Hospital Roster</h3>
+                                <p class="text-[9px] text-sky-400 uppercase tracking-widest font-bold mt-1">Real-time Patient Data Monitoring</p>
+                            </div>
+                            <span class="bg-emerald-500/20 text-emerald-400 text-[10px] font-bold px-3 py-1 rounded-full border border-emerald-500/30 animate-pulse">DB SYNCED</span>
+                        </div>
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-slate-50 text-slate-400 text-[10px] uppercase tracking-[0.15em] font-bold">
+                                    <th class="p-5 border-b">ID & Transport</th>
+                                    <th class="p-5 border-b">Assigned Bed</th>
+                                    <th class="p-5 border-b w-1/3">Diagnostic Summary (From AI)</th>
+                                    <th class="p-5 border-b">Status</th>
+                                    <th class="p-5 border-b">Priority Class</th>
+                                </tr>
+                            </thead>
+                            <tbody id="ward-table-body" class="text-xs">
+                                <tr id="empty-ward-msg"><td colspan="5" class="p-12 text-center text-slate-400 italic font-medium">Monitoring Link Established. Waiting for Ambulance Data...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="view-staff" class="hidden view-section max-w-4xl mx-auto fade-in">
+                    <div id="staff-container" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div id="empty-staff-msg" class="col-span-2 p-12 text-center text-slate-400 italic border-2 border-dashed border-slate-200 rounded-2xl font-medium uppercase text-[10px] tracking-widest">No Active Alerts. Staff On Standby.</div>
+                    </div>
+                </div>
+
+                <div id="view-judge" class="hidden view-section max-w-5xl mx-auto fade-in h-full flex flex-col">
+                    <div class="bg-slate-900 rounded-2xl shadow-2xl flex-1 flex flex-col overflow-hidden border border-slate-800">
+                        <div class="p-4 border-b border-slate-700 bg-slate-800 flex justify-between items-center">
+                            <h3 class="font-mono text-emerald-400 text-[10px] font-bold uppercase tracking-widest"><i class="fa-solid fa-server mr-2"></i> Backend Trace Console</h3>
+                            <span class="flex h-2 w-2"><span class="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-emerald-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span></span>
+                        </div>
+                        <div id="master-console" class="p-6 font-mono text-[11px] text-slate-400 overflow-y-auto flex-1 space-y-3 leading-relaxed">
+                            <div class="text-sky-500">> TriageOS Multi-Agent Kernel initialized...</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function setText(id, text) { const el = document.getElementById(id); if(el) el.innerText = text; }
+        function setHTML(id, html) { const el = document.getElementById(id); if(el) el.innerHTML = html; }
+        function hideEl(id) { const el = document.getElementById(id); if(el) el.classList.add('hidden'); }
+        function showEl(id) { const el = document.getElementById(id); if(el) el.classList.remove('hidden'); }
+
+        let currentAuthRole = 'ambulance';
+
+        // Initialize Local Storage Database
+        try {
+            if(!localStorage.getItem('triage_users_v9')) {
+                const defaultUsers = {
+                    'admin@hospital.com': { name: 'Dr. Admin User', pass: 'admin123', role: 'hospital' },
+                    'unit1@ems.com': { name: 'Ambulance Unit 1', pass: 'unit123', role: 'ambulance' }
+                };
+                localStorage.setItem('triage_users_v9', JSON.stringify(defaultUsers));
+            }
+            if(!localStorage.getItem('triage_ward_data_v9')) localStorage.setItem('triage_ward_data_v9', JSON.stringify([]));
+            if(!localStorage.getItem('triage_staff_data_v9')) localStorage.setItem('triage_staff_data_v9', JSON.stringify([]));
+            if(!localStorage.getItem('triage_audit_logs_v9')) localStorage.setItem('triage_audit_logs_v9', JSON.stringify([]));
+        } catch(e) { console.error(e); }
+
+        window.onload = () => { setRole('ambulance'); }
+
+        function setRole(role) {
+            try {
+                currentAuthRole = role;
+                const btnAmb = document.getElementById('role-amb');
+                const btnHosp = document.getElementById('role-hosp');
+                
+                if(btnAmb && btnHosp) {
+                    btnAmb.className = role === 'ambulance' ? "flex-1 py-3 text-xs font-bold rounded-lg transition bg-sky-600 text-white shadow-md" : "flex-1 py-3 text-xs font-bold rounded-lg transition text-slate-400 hover:text-slate-200";
+                    btnHosp.className = role === 'hospital' ? "flex-1 py-3 text-xs font-bold rounded-lg transition bg-sky-600 text-white shadow-md" : "flex-1 py-3 text-xs font-bold rounded-lg transition text-slate-400 hover:text-slate-200";
+                }
+
+                const emailInput = document.getElementById('login-email');
+                const passInput = document.getElementById('login-pass');
+                if(emailInput && passInput) {
+                    if(role === 'ambulance') {
+                        emailInput.value = 'unit1@ems.com';
+                        passInput.value = 'unit123';
+                    } else {
+                        emailInput.value = 'admin@hospital.com';
+                        passInput.value = 'admin123';
+                    }
+                }
+                hideEl('auth-error');
+            } catch(e) { console.error(e); }
+        }
+
+        function toggleAuth(type) {
+            hideEl('auth-error');
+            const loginForm = document.getElementById('form-login');
+            const regForm = document.getElementById('form-register');
+            const tabLogin = document.getElementById('tab-login');
+            const tabReg = document.getElementById('tab-register');
+
+            if(loginForm && regForm && tabLogin && tabReg) {
+                if(type === 'login') {
+                    loginForm.classList.remove('hidden');
+                    regForm.classList.add('hidden');
+                    tabLogin.className = "flex-1 pb-2 font-bold text-sky-400 border-b-2 border-sky-400 transition";
+                    tabReg.className = "flex-1 pb-2 font-bold text-slate-400 border-b-2 border-transparent transition";
+                } else {
+                    regForm.classList.remove('hidden');
+                    loginForm.classList.add('hidden');
+                    tabReg.className = "flex-1 pb-2 font-bold text-sky-400 border-b-2 border-sky-400 transition";
+                    tabLogin.className = "flex-1 pb-2 font-bold text-slate-400 border-b-2 border-transparent transition";
+                }
+            }
+        }
+
+        function showError(msg) {
+            setText('auth-error', msg);
+            showEl('auth-error');
+        }
+
+        function handleRegister() {
+            try {
+                const name = document.getElementById('reg-name')?.value.trim();
+                const email = document.getElementById('reg-email')?.value.trim();
+                const pass = document.getElementById('reg-pass')?.value;
+
+                if(!name || !email || !pass) return showError("Please fill all fields.");
+
+                let users = JSON.parse(localStorage.getItem('triage_users_v9')) || {};
+                if (users[email]) return showError("Email already registered.");
+
+                users[email] = { name: name, pass: pass, role: currentAuthRole };
+                localStorage.setItem('triage_users_v9', JSON.stringify(users));
+                
+                launchApp(name, email, currentAuthRole);
+            } catch (error) { alert("Registration Error: " + error.message); }
+        }
+
+        function handleLogin() {
+            try {
+                const email = document.getElementById('login-email')?.value.trim();
+                const pass = document.getElementById('login-pass')?.value;
+
+                if(!email || !pass) return showError("Enter Access ID and Security Key.");
+
+                let users = JSON.parse(localStorage.getItem('triage_users_v9')) || {};
+
+                if (users[email] && users[email].pass === pass) {
+                    if (users[email].role !== currentAuthRole) {
+                        showError(`Error: You are a ${users[email].role.toUpperCase()}. Select correct portal.`);
+                    } else {
+                        launchApp(users[email].name, email, users[email].role);
+                    }
+                } else {
+                    showError("Invalid Credentials.");
+                }
+            } catch (error) { alert("Login Error: " + error.message); }
+        }
+
+        function launchApp(userName, userEmail, userRole) {
+            try {
+                setText('profile-name', userName || "User");
+                setText('profile-role-display', userRole === 'ambulance' ? 'Field Operative' : 'Central Command');
+                setText('role-badge', `PORTAL: ${userRole.toUpperCase()}`);
+
+                if (userRole === 'ambulance') {
+                    showEl('nav-view-overview');
+                    hideEl('nav-view-ward');
+                    hideEl('nav-view-staff');
+                    switchTab('view-overview');
+                } else {
+                    hideEl('nav-view-overview');
+                    showEl('nav-view-ward');
+                    showEl('nav-view-staff');
+                    switchTab('view-ward');
+                }
+
+                loadPersistedData();
+
+                hideEl('auth-view');
+                showEl('app-view');
+            } catch (error) { alert("Launch Error: " + error.message); }
+        }
+
+        function logout() { window.location.reload(); }
+
+        function switchTab(viewId) {
+            document.querySelectorAll('.view-section').forEach(el => el.classList.add('hidden'));
+            
+            ['nav-view-overview', 'nav-view-ward', 'nav-view-staff', 'nav-view-judge'].forEach(id => {
+                const el = document.getElementById(id);
+                if(el) {
+                    el.classList.remove('bg-sky-600', 'text-white', 'shadow-md');
+                    el.classList.add('text-slate-400');
+                }
+            });
+            
+            showEl(viewId);
+            const activeNav = document.getElementById('nav-' + viewId);
+            if(activeNav) activeNav.classList.add('bg-sky-600', 'text-white', 'shadow-md');
+            
+            const titles = { 
+                'view-overview': 'EMS Transmission Uplink', 
+                'view-ward': 'Hospital Command Roster', 
+                'view-staff': 'Specialist Assignments', 
+                'view-judge': 'System Audit Trace' 
+            };
+            setText('header-title', titles[viewId] || "Console");
+        }
+
+        function loadPersistedData() {
+            let wardData = []; let staffData = []; let auditLogs = [];
+            try { wardData = JSON.parse(localStorage.getItem('triage_ward_data_v9')) || []; } catch(e){}
+            try { staffData = JSON.parse(localStorage.getItem('triage_staff_data_v9')) || []; } catch(e){}
+            try { auditLogs = JSON.parse(localStorage.getItem('triage_audit_logs_v9')) || []; } catch(e){}
+
+            if (wardData.length > 0) {
+                document.getElementById('empty-ward-msg')?.remove();
+                let wardHtml = '';
+                wardData.forEach(item => wardHtml += buildWardRow(item));
+                setHTML('ward-table-body', wardHtml);
+            }
+
+            if (staffData.length > 0) {
+                document.getElementById('empty-staff-msg')?.remove();
+                let staffHtml = '';
+                staffData.forEach(item => staffHtml += buildStaffCard(item));
+                setHTML('staff-container', staffHtml);
+            }
+
+            let auditHtml = `<div class="text-sky-500">> TriageOS Multi-Agent Kernel initialized...</div>`;
+            auditLogs.forEach(log => { auditHtml += `<div class="${log.color}">[${log.time}] ${log.msg}</div>`; });
+            setHTML('master-console', auditHtml);
+            
+            const consoleDiv = document.getElementById('master-console');
+            if(consoleDiv) consoleDiv.scrollTop = consoleDiv.scrollHeight;
+        }
+
+        function logTrace(msg, type="info") {
+            const time = new Date().toLocaleTimeString();
+            const color = type === "success" ? "text-emerald-400" : (type === "warning" ? "text-amber-400" : "text-slate-500");
+            
+            let logs = [];
+            try { logs = JSON.parse(localStorage.getItem('triage_audit_logs_v9')) || []; } catch(e){}
+            logs.push({ time, msg, color });
+            localStorage.setItem('triage_audit_logs_v9', JSON.stringify(logs));
+
+            const consoleDiv = document.getElementById('master-console');
+            if(consoleDiv) {
+                consoleDiv.innerHTML += `<div class="${color}">[${time}] ${msg}</div>`;
+                consoleDiv.scrollTop = consoleDiv.scrollHeight;
+            }
+        }
+
+        // --- MLOPS MAGIC: This function now connects to your Docker container ---
+        async function runDispatch() {
+            const textEl = document.getElementById('dispatchInput');
+            const ambEl = document.getElementById('ambulanceId');
+            
+            const text = textEl ? textEl.value : "";
+            const ambId = (ambEl && ambEl.value.trim() !== "") ? ambEl.value.trim() : "UNIT-X";
+            
+            if(!text) return alert("Report cannot be empty.");
+            const pId = "PAT-" + Math.floor(1000 + Math.random() * 9000);
+
+            hideEl('input-container');
+            showEl('processing-state');
+            logTrace(`INITIATING UPLINK: Patient ${pId} via ${ambId}`, "warning");
+
+            try {
+                // Point this to your FastAPI Docker backend running locally
+                const response = await fetch('http://localhost:8000/api/dispatch', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ text: text })
+                });
+                
+                const data = await response.json();
+                
+                // Read the response from our Python API
+                const aiResult = data.ai_triage_result;
+
+                hideEl('processing-state');
+                showEl('resolution-dashboard');
+                
+                setText('res-patient-id', `TRACKING ID: ${pId} | UNIT: ${ambId}`);
+                
+                // Update the UI cards
+                setText('res-db', `Severity registered: ${aiResult.severity_class}`);
+                setText('res-task', `Secured: ${aiResult.assigned_bed}`);
+                setText('res-cal', aiResult.action);
+
+                // Format the plan for the hospital view
+                const plan = {
+                    severity_level: aiResult.severity_class,
+                    patient_details: text,
+                    calendar_action: aiResult.action,
+                    eta_minutes: "5" 
+                };
+
+                saveWardAndStaff(plan, pId, ambId);
+
+                setTimeout(() => { document.getElementById('card-db')?.classList.replace('agent-card-hidden', 'agent-card-visible'); logTrace(`Agent 1: MLflow Sync ${pId}`, "success"); }, 500);
+                setTimeout(() => { document.getElementById('card-task')?.classList.replace('agent-card-hidden', 'agent-card-visible'); logTrace(`Agent 2: Hospital Bed Assigned`, "warning"); }, 1200);
+                setTimeout(() => { document.getElementById('card-cal')?.classList.replace('agent-card-hidden', 'agent-card-visible'); logTrace(`Agent 3: Staff Alerted`, "success"); showEl('resetBtn'); }, 2000);
+
+            } catch (e) { 
+                alert("Server Offline. Ensure Docker container is running on port 8000."); 
+                logTrace(`CRITICAL ERROR: Failed to reach Python API.`, "error");
+                console.error(e);
+                resetDispatch(); 
+            }
+        }
+
+        function saveWardAndStaff(plan, pId, ambId) {
+            let loc = "TRAUMA-BAY"; let cls = "border-l-red-500 bg-red-50/30";
+            if(plan.severity_level !== 'CRITICAL') { loc = plan.assigned_bed || "ER-ZONE-B"; cls = "border-l-sky-500 bg-white"; }
+            
+            let wardData = [];
+            try { wardData = JSON.parse(localStorage.getItem('triage_ward_data_v9')) || []; } catch(e){}
+            const wardRecord = { pId, ambId, loc, details: plan.patient_details, severity: plan.severity_level, cls };
+            wardData.unshift(wardRecord);
+            localStorage.setItem('triage_ward_data_v9', JSON.stringify(wardData));
+
+            let staffData = [];
+            try { staffData = JSON.parse(localStorage.getItem('triage_staff_data_v9')) || []; } catch(e){}
+            const staffRecord = { pId, action: plan.calendar_action, eta: plan.eta_minutes };
+            staffData.unshift(staffRecord);
+            localStorage.setItem('triage_staff_data_v9', JSON.stringify(staffData));
+        }
+
+        function buildWardRow(item) {
+            return `<tr class="fade-in border-l-4 ${item.cls} border-b border-slate-100">
+                <td class="p-5 font-mono font-bold text-slate-800">${item.pId}<br><span class="text-[9px] text-slate-400 font-sans">${item.ambId}</span></td>
+                <td class="p-5 font-bold text-slate-700">${item.loc}</td>
+                <td class="p-5 text-slate-600 italic">${item.details}</td>
+                <td class="p-5"><span class="bg-amber-100 text-amber-700 px-2 py-1 rounded-[4px] font-bold tracking-tighter uppercase text-[10px]">Routing</span></td>
+                <td class="p-5 font-black ${item.severity === 'CRITICAL' ? 'text-red-600' : 'text-sky-600'}">${item.severity}</td>
+            </tr>`;
+        }
+
+        function buildStaffCard(item) {
+            const etaDisplay = item.eta ? item.eta : '--';
+            return `<div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 fade-in border-l-4 border-l-purple-500 flex flex-col h-full">
+                <div class="flex justify-between border-b pb-2 mb-3 items-center">
+                    <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Alert Profile</span>
+                    <div class="flex space-x-3 items-center">
+                        <span class="text-[10px] font-bold text-red-500 bg-red-50 px-2 py-1 rounded animate-pulse">ETA: ${etaDisplay}m</span>
+                        <span class="text-[10px] font-mono text-purple-600 font-bold">${item.pId}</span>
+                    </div>
+                </div>
+                <p class="text-xs text-slate-600 font-medium leading-relaxed">${item.action}</p>
+            </div>`;
+        }
+
+        function resetDispatch() {
+            hideEl('resolution-dashboard');
+            ['card-db', 'card-task', 'card-cal'].forEach(id => {
+                const el = document.getElementById(id);
+                if(el) el.className = "bg-white rounded-xl shadow-sm p-5 agent-card-hidden";
+            });
+            
+            const inputEl = document.getElementById('dispatchInput');
+            if(inputEl) inputEl.value = '';
+            
+            showEl('input-container');
+        }
+    </script>
+</body>
+</html>
